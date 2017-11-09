@@ -15,7 +15,7 @@ class Model: NSObject {
     var modelQuote : String? = nil
     var modelAuthor : String? = nil
     
-    init(image: UIImage, quote: String, author: String) {
+    init?(image: UIImage, quote: String, author: String) {
         modelImage = image
         modelQuote = quote
         modelAuthor = author

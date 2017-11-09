@@ -19,6 +19,8 @@
 		E6DB75901FB39BB000A56E33 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6DB758F1FB39BB000A56E33 /* QuoteView.xib */; };
 		E6DB75921FB39E3300A56E33 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DB75911FB39E3300A56E33 /* QuoteBuilderViewController.swift */; };
 		E6DB75941FB39FAD00A56E33 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DB75931FB39FAD00A56E33 /* Model.swift */; };
+		E6DB759A1FB411CA00A56E33 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DB75991FB411CA00A56E33 /* QuoteTableViewController.swift */; };
+		E6DB759C1FB4142000A56E33 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DB759B1FB4142000A56E33 /* QuoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E6DB758F1FB39BB000A56E33 /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
 		E6DB75911FB39E3300A56E33 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 		E6DB75931FB39FAD00A56E33 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E6DB75991FB411CA00A56E33 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		E6DB759B1FB4142000A56E33 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				E6DB75741FB393CF00A56E33 /* AppDelegate.swift */,
 				E6DB75761FB393CF00A56E33 /* ViewController.swift */,
 				E6DB75781FB393CF00A56E33 /* Main.storyboard */,
+				E6DB759B1FB4142000A56E33 /* QuoteTableViewCell.swift */,
+				E6DB75991FB411CA00A56E33 /* QuoteTableViewController.swift */,
 				E6DB75931FB39FAD00A56E33 /* Model.swift */,
 				E6DB75911FB39E3300A56E33 /* QuoteBuilderViewController.swift */,
 				E6DB758B1FB399A400A56E33 /* QuoteView.swift */,
@@ -239,7 +245,9 @@
 			files = (
 				E6DB75921FB39E3300A56E33 /* QuoteBuilderViewController.swift in Sources */,
 				E6DB75771FB393CF00A56E33 /* ViewController.swift in Sources */,
+				E6DB759A1FB411CA00A56E33 /* QuoteTableViewController.swift in Sources */,
 				E6DB75751FB393CF00A56E33 /* AppDelegate.swift in Sources */,
+				E6DB759C1FB4142000A56E33 /* QuoteTableViewCell.swift in Sources */,
 				E6DB75941FB39FAD00A56E33 /* Model.swift in Sources */,
 				E6DB757D1FB393CF00A56E33 /* QuotePro.xcdatamodeld in Sources */,
 				E6DB758C1FB399A400A56E33 /* QuoteView.swift in Sources */,
