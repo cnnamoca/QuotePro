@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuoteView">
+            <connections>
+                <outlet property="authorLabel" destination="OMj-RV-cEY" id="jyv-Xp-qmv"/>
+                <outlet property="imageView" destination="15K-ZP-GpB" id="oAC-Kt-CPq"/>
+                <outlet property="quoteLabel" destination="KW2-Jr-UgE" id="a9g-nM-ty9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="15K-ZP-GpB">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW2-Jr-UgE">
+                    <rect key="frame" x="20" y="115" width="260" height="71"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-RV-cEY">
+                    <rect key="frame" x="113" y="268" width="74" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OMj-RV-cEY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="113" id="RuE-yL-DEz"/>
+                <constraint firstItem="KW2-Jr-UgE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="115" id="Z2o-5q-OxI"/>
+                <constraint firstAttribute="trailing" secondItem="15K-ZP-GpB" secondAttribute="trailing" id="ZDX-qp-05K"/>
+                <constraint firstItem="15K-ZP-GpB" firstAttribute="centerX" secondItem="KW2-Jr-UgE" secondAttribute="centerX" id="ZhG-VC-dFJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OMj-RV-cEY" secondAttribute="trailing" constant="113" id="Zwy-cl-emo"/>
+                <constraint firstItem="15K-ZP-GpB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b2u-28-G3e"/>
+                <constraint firstItem="15K-ZP-GpB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="eWO-4k-jio"/>
+                <constraint firstAttribute="bottom" secondItem="OMj-RV-cEY" secondAttribute="bottom" constant="20" symbolic="YES" id="hWd-Li-iry"/>
+                <constraint firstItem="15K-ZP-GpB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lnw-Y9-aXZ"/>
+                <constraint firstItem="15K-ZP-GpB" firstAttribute="centerY" secondItem="KW2-Jr-UgE" secondAttribute="centerY" id="v3C-d5-REE"/>
+                <constraint firstItem="KW2-Jr-UgE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wZz-cS-RxV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="152" y="-32"/>
+        </view>
+    </objects>
+</document>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3mb-mY-Sh4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuotePro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +22,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-242" y="33"/>
+        </scene>
+        <!--Quote Builder View Controller-->
+        <scene sceneID="OhL-3R-lPc">
+            <objects>
+                <viewController id="3mb-mY-Sh4" customClass="QuoteBuilderViewController" customModule="QuotePro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzk-eK-Fm9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2W4-KC-bZq" customClass="QuoteView" customModule="QuotePro" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="cdQ-1f-Mlc"/>
+                                    <constraint firstAttribute="height" constant="300" id="h13-2u-OKl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpJ-bd-Im9">
+                                <rect key="frame" x="110" y="562" width="155" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Random Quote"/>
+                                <connections>
+                                    <action selector="generateQuote:" destination="3mb-mY-Sh4" eventType="touchUpInside" id="Mds-Pl-6Sj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBG-0K-ZXV">
+                                <rect key="frame" x="110" y="600" width="155" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="3mb-mY-Sh4" eventType="touchUpInside" id="Whh-la-bmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4U-x9-wU5">
+                                <rect key="frame" x="110" y="524" width="155" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Random Image"/>
+                                <connections>
+                                    <action selector="generateImg:" destination="3mb-mY-Sh4" eventType="touchUpInside" id="OHM-Fe-eui"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z5i-gK-XAS" firstAttribute="trailing" secondItem="zpJ-bd-Im9" secondAttribute="trailing" constant="110" id="5Dk-7w-cE8"/>
+                            <constraint firstItem="F4U-x9-wU5" firstAttribute="top" secondItem="2W4-KC-bZq" secondAttribute="bottom" constant="41" id="5IU-HZ-oge"/>
+                            <constraint firstItem="z5i-gK-XAS" firstAttribute="trailing" secondItem="yBG-0K-ZXV" secondAttribute="trailing" constant="110" id="5Qo-gP-OYh"/>
+                            <constraint firstItem="F4U-x9-wU5" firstAttribute="leading" secondItem="z5i-gK-XAS" secondAttribute="leading" constant="110" id="6RC-rZ-sed"/>
+                            <constraint firstItem="yBG-0K-ZXV" firstAttribute="top" secondItem="zpJ-bd-Im9" secondAttribute="bottom" constant="8" id="D4R-r2-Uqp"/>
+                            <constraint firstItem="z5i-gK-XAS" firstAttribute="trailing" secondItem="F4U-x9-wU5" secondAttribute="trailing" constant="110" id="LEl-Va-rjW"/>
+                            <constraint firstItem="2W4-KC-bZq" firstAttribute="leading" secondItem="z5i-gK-XAS" secondAttribute="leading" constant="37.5" id="Tgz-iI-szF"/>
+                            <constraint firstItem="zpJ-bd-Im9" firstAttribute="top" secondItem="F4U-x9-wU5" secondAttribute="bottom" constant="8" id="WQT-7i-92A"/>
+                            <constraint firstItem="zpJ-bd-Im9" firstAttribute="leading" secondItem="z5i-gK-XAS" secondAttribute="leading" constant="110" id="WQp-6M-yHH"/>
+                            <constraint firstItem="z5i-gK-XAS" firstAttribute="trailing" secondItem="2W4-KC-bZq" secondAttribute="trailing" constant="37.5" id="cc9-Gh-4dC"/>
+                            <constraint firstItem="z5i-gK-XAS" firstAttribute="bottom" secondItem="yBG-0K-ZXV" secondAttribute="bottom" constant="37" id="cst-Ae-UjU"/>
+                            <constraint firstItem="2W4-KC-bZq" firstAttribute="top" secondItem="z5i-gK-XAS" secondAttribute="top" constant="163" id="jfd-ww-ETj"/>
+                            <constraint firstItem="yBG-0K-ZXV" firstAttribute="leading" secondItem="z5i-gK-XAS" secondAttribute="leading" constant="110" id="w0e-u8-zIj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z5i-gK-XAS"/>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="2W4-KC-bZq" id="gqV-Z3-Uqd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDc-Ws-e3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="33"/>
         </scene>
     </scenes>
 </document>
