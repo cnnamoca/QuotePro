@@ -75,10 +75,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="csB-Sh-0Wj" id="TVT-wa-1b3"/>
-                            <outlet property="delegate" destination="csB-Sh-0Wj" id="htu-th-TVB"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hS0-tR-xOa">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="doo-lH-KxJ">

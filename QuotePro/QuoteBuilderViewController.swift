@@ -9,7 +9,7 @@
 import UIKit
 
 protocol QuoteDelegate {
-    func loadQuotes()
+    func loadQuotes(quote: Model)
 }
 
 class QuoteBuilderViewController: UIViewController {
@@ -20,6 +20,9 @@ class QuoteBuilderViewController: UIViewController {
     
     var quoteArr = [Model]()
     
+    var sourceVC = QuoteTableViewController()
+    var sourceIndexPath = IndexPath()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,18 +46,14 @@ class QuoteBuilderViewController: UIViewController {
     @IBAction func save(_ sender: UIButton) {
         if self.isEditing == true{
             quote = Model(image: myView.imageView.image!, quote: myView.quoteLabel.text!, author: myView.authorLabel.text!)
+            sourceVC.quotes[sourceIndexPath.row] = self.quote!
             dismiss(animated: true, completion: nil)
         } else {
             quote = Model(image: myView.imageView.image!, quote: myView.quoteLabel.text!, author: myView.authorLabel.text!)
-            //
-            quoteArr.append(quote!)
-            let quoteTableVC = QuoteTableViewController()
-            quoteTableVC.quotes = quoteArr
-            //
+            sourceVC.quote = self.quote
+            self.delegate = sourceVC
+            sourceVC.loadQuotes(quote: quote!)
             dismiss(animated: true, completion: nil)
         }
     }
-    
-
-
 }

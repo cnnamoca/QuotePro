@@ -11,6 +11,7 @@ import UIKit
 class QuoteTableViewController: UITableViewController, QuoteDelegate {
     
     var quotes = [Model]()
+    var quote : Model?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +38,22 @@ class QuoteTableViewController: UITableViewController, QuoteDelegate {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quotes.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuoteCell", for: indexPath) as! QuoteTableViewCell
         
         let quote = quotes[indexPath.row]
         cell.quoteAuthor.text = quote.modelAuthor
         cell.quote.text = quote.modelQuote
-
-
+        
+        
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,15 +73,27 @@ class QuoteTableViewController: UITableViewController, QuoteDelegate {
         
         let selectedQuote = quotes[indexPath.row]
         quoteVC.quote = selectedQuote
+        quoteVC.sourceVC = self
+        quoteVC.sourceIndexPath = indexPath
         quoteVC.isEditing = true
             
+        } else if segue.identifier == "AddQuote" {
+            guard let quoteVC = segue.destination as? QuoteBuilderViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            quoteVC.sourceVC = self
         }
     }
     
     //MARK: Delegate Methods
-    func loadQuotes(){
+    func loadQuotes(quote: Model){
+        
+        DispatchQueue.main.async {
+            
+            self.quotes.append(self.quote!)
+//            self.tableView.reloadData()
+        }
         
     }
-    
-
 }
